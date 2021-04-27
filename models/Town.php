@@ -1,4 +1,4 @@
-<?php namespace VojtaSvoboda\LocationTown\Models;
+<?php namespace PlanetaDelEste\LocationTown\Models;
 
 use Form;
 use URL;
@@ -12,7 +12,7 @@ class Town extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'vojtasvoboda_locationtown_towns';
+    public $table = 'planetadeleste_locationtown_towns';
 
     public $rules = [
         'name'       => 'required',
@@ -25,7 +25,7 @@ class Town extends Model
     protected $dates = ['created_at', 'updated_at', 'deleted_at'];
 
     public $belongsTo = [
-        'state' => 'RainLab\Location\Models\State'
+        'state' => 'Winter\Location\Models\State'
     ];
 
     public function findOneBySlug($slug, $params = [])
@@ -126,7 +126,7 @@ class Town extends Model
     /**
      * Handler for the pages.menuitem.resolveItem event.
      *
-     * @param \RainLab\Pages\Classes\MenuItem $item  Specifies the menu item.
+     * @param \Winter\Pages\Classes\MenuItem  $item  Specifies the menu item.
      * @param \Cms\Classes\Theme              $theme Specifies the current theme.
      * @param string                          $url   Specifies the current page URL, normalized, in lower case
      *                                               The URL is specified relative to the website root, it includes the

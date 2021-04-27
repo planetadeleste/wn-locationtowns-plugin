@@ -1,9 +1,9 @@
-<?php namespace VojtaSvoboda\LocationTown\Components;
+<?php namespace PlanetaDelEste\LocationTown\Components;
 
 use Cms\Classes\ComponentBase;
 use Cms\Classes\Page;
-use RainLab\Location\Models\State;
-use VojtaSvoboda\LocationTown\Models\Town as TownModel;
+use Winter\Location\Models\State;
+use PlanetaDelEste\LocationTown\Models\Town as TownModel;
 
 class Towns extends ComponentBase
 {
@@ -14,8 +14,8 @@ class Towns extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name' => 'vojtasvoboda.locationtown::lang.towns.title',
-            'description' => 'vojtasvoboda.locationtown::lang.towns.description',
+            'name' => 'planetadeleste.locationtown::lang.towns.title',
+            'description' => 'planetadeleste.locationtown::lang.towns.description',
         ];
     }
 
@@ -23,33 +23,33 @@ class Towns extends ComponentBase
     {
         return [
             'pageNumber' => [
-                'title' => 'vojtasvoboda.locationtown::lang.towns.pagination',
-                'description' => 'vojtasvoboda.locationtown::lang.towns.pagination_description',
+                'title' => 'planetadeleste.locationtown::lang.towns.pagination',
+                'description' => 'planetadeleste.locationtown::lang.towns.pagination_description',
                 'type' => 'string',
                 'default' => '{{ :page }}',
             ],
             'stateFilter' => [
-                'title' => 'vojtasvoboda.locationtown::lang.towns.state',
-                'description' => 'vojtasvoboda.locationtown::lang.towns.state_description',
+                'title' => 'planetadeleste.locationtown::lang.towns.state',
+                'description' => 'planetadeleste.locationtown::lang.towns.state_description',
                 'type' => 'dropdown',
             ],
             'townsPerPage' => [
-                'title' => 'vojtasvoboda.locationtown::lang.towns.per_page',
+                'title' => 'planetadeleste.locationtown::lang.towns.per_page',
                 'type' => 'string',
                 'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'vojtasvoboda.locationtown::lang.towns.per_page_validation',
+                'validationMessage' => 'planetadeleste.locationtown::lang.towns.per_page_validation',
                 'default' => '10',
             ],
             'noTownsMessage' => [
-                'title' => 'vojtasvoboda.locationtown::lang.towns.no_towns',
-                'description'  => 'vojtasvoboda.locationtown::lang.towns.no_towns_description',
+                'title' => 'planetadeleste.locationtown::lang.towns.no_towns',
+                'description'  => 'planetadeleste.locationtown::lang.towns.no_towns_description',
                 'type' => 'string',
                 'default' => 'No towns found',
                 'showExternalParam' => false,
             ],
             'townPage' => [
-                'title' => 'vojtasvoboda.locationtown::lang.towns.page',
-                'description' => 'vojtasvoboda.locationtown::lang.towns.page_description',
+                'title' => 'planetadeleste.locationtown::lang.towns.page',
+                'description' => 'planetadeleste.locationtown::lang.towns.page_description',
                 'type' => 'dropdown',
                 'default' => 'town/detail',
             ],

@@ -1,7 +1,7 @@
-<?php namespace VojtaSvoboda\LocationTown\Components;
+<?php namespace PlanetaDelEste\LocationTown\Components;
 
 use Cms\Classes\ComponentBase;
-use VojtaSvoboda\LocationTown\Models\Town as TownModel;
+use PlanetaDelEste\LocationTown\Models\Town as TownModel;
 
 class Town extends ComponentBase
 {
@@ -9,8 +9,8 @@ class Town extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name' => 'vojtasvoboda.locationtown::lang.town.title',
-            'description' => 'vojtasvoboda.locationtown::lang.town.description',
+            'name' => 'planetadeleste.locationtown::lang.town.title',
+            'description' => 'planetadeleste.locationtown::lang.town.description',
         ];
     }
 
@@ -18,8 +18,8 @@ class Town extends ComponentBase
     {
         return [
             'slug' => [
-                'title' => 'vojtasvoboda.locationtown::lang.town.slug',
-                'description' => 'vojtasvoboda.locationtown::lang.town.slug_description',
+                'title' => 'planetadeleste.locationtown::lang.town.slug',
+                'description' => 'planetadeleste.locationtown::lang.town.slug_description',
                 'default' => '{{ :slug }}',
                 'type' => 'string',
             ],

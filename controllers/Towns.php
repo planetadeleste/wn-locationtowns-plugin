@@ -1,4 +1,4 @@
-<?php namespace VojtaSvoboda\LocationTown\Controllers;
+<?php namespace PlanetaDelEste\LocationTown\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
@@ -21,7 +21,7 @@ class Towns extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('October.System', 'system', 'settings');
-        SettingsManager::setContext('VojtaSvoboda.LocationTown', 'locationtown');
+        BackendMenu::setContext('Winter.System', 'system', 'settings');
+        SettingsManager::setContext('PlanetaDelEste.LocationTown', 'locationtown');
     }
 }

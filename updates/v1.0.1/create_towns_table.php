@@ -1,6 +1,6 @@
-<?php namespace VojtaSvoboda\LocationTown\Updates;
+<?php namespace PlanetaDelEste\LocationTown\Updates;
 
-use October\Rain\Database\Updates\Migration;
+use Winter\Storm\Database\Updates\Migration;
 use Schema;
 use System\Classes\PluginManager;
 
@@ -15,7 +15,7 @@ class CreateTownsTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
 
-            if ( $this->isPluginActive('RainLab.Location') ) {
+            if ( $this->isPluginActive('Winter.Location') ) {
                 $table->integer('state_id')->unsigned()->nullable();
                 $table->foreign('state_id')->references('id')->on('rainlab_location_states')->onDelete('set null');
             }

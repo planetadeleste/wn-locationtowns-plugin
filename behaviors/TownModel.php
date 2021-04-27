@@ -1,11 +1,11 @@
 <?php
 
 
-namespace VojtaSvoboda\LocationTown\Behaviors;
+namespace PlanetaDelEste\LocationTown\Behaviors;
 
 
 use System\Classes\ModelBehavior;
-use VojtaSvoboda\LocationTown\Models\Town;
+use PlanetaDelEste\LocationTown\Models\Town;
 
 class TownModel extends ModelBehavior
 {
@@ -26,7 +26,7 @@ class TownModel extends ModelBehavior
             ]);
         }
 
-        $model->belongsTo['town'] = [\VojtaSvoboda\LocationTown\Models\Town::class];
+        $model->belongsTo['town'] = [\PlanetaDelEste\LocationTown\Models\Town::class];
     }
 
     public function getTownOptions()

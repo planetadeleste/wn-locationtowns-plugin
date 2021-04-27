@@ -6,26 +6,26 @@
 name: Town
 
 # Model Form Field configuration
-form: $/vojtasvoboda/locationtown/models/town/fields.yaml
+form: $/planetadeleste/locationtown/models/town/fields.yaml
 
 # Model Class name
-modelClass: VojtaSvoboda\LocationTown\Models\Town
+modelClass: PlanetaDelEste\LocationTown\Models\Town
 
 # Default redirect location
-defaultRedirect: vojtasvoboda/locationtown/towns
+defaultRedirect: planetadeleste/locationtown/towns
 
 # Create page
 create:
-    title: vojtasvoboda.locationtown::lang.form.create_town
-    redirect: vojtasvoboda/locationtown/towns
-    redirectClose: vojtasvoboda/locationtown/towns
+  title: planetadeleste.locationtown::lang.form.create_town
+  redirect: planetadeleste/locationtown/towns
+  redirectClose: planetadeleste/locationtown/towns
 
 # Update page
 update:
-    title: vojtasvoboda.locationtown::lang.form.edit_town
-    redirect: vojtasvoboda/locationtown/towns
-    redirectClose: vojtasvoboda/locationtown/towns
+  title: planetadeleste.locationtown::lang.form.edit_town
+  redirect: planetadeleste/locationtown/towns
+  redirectClose: planetadeleste/locationtown/towns
 
 # Preview page
 preview:
-    title: vojtasvoboda.locationtown::lang.form.preview_town
+  title: planetadeleste.locationtown::lang.form.preview_town

@@ -1,9 +1,12 @@
 1.0.1:
-    - First version of LocationTown
-    - create_towns_table.php
+  - First version of LocationTown
+  - v1.0.1/create_towns_table.php
 1.0.2: Add localization for Brazil Portuguese, thanks to Amanda Tresbach
 1.0.3: Fix backend form and listing labels
 1.0.4: Make all fields and labels translatable
 1.0.5: Add cs_CZ locale
 1.0.6: Fix YAML config paths for last OctoberCMS build
 1.0.7: Add composer.json, minor fixes for OctoberCMS stable release
+2.0.0:
+  - Rebrand to PlanetaDelste.LocationTown
+  - v2.0.0/rename_tables.php

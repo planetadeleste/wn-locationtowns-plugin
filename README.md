@@ -1,44 +1,42 @@
-# Location Town plugin for OctoberCMS
+# Location Town plugin for WinterCMS
 
-[![Codacy](https://img.shields.io/codacy/ddb7e5ce0e1542058c0f3d9111a8876e.svg)](https://www.codacy.com/app/vojtasvoboda/oc-locationtowns-plugin)
-[![Scrutinizer Coverage](https://img.shields.io/scrutinizer/g/vojtasvoboda/oc-locationtowns-plugin.svg)](https://scrutinizer-ci.com/g/vojtasvoboda/oc-locationtowns-plugin/?branch=master)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vojtasvoboda/oc-locationtowns-plugin/blob/master/LICENSE)
+> This plugin is a fork of [VojtaSvoboda.LocationTown](https://github.com/vojtasvoboda/oc-locationtowns-plugin), migrated to [WinterCMS](https://wintercms.com)
 
-Adds towns to states managed by RainLab.Location plugin. Included:
+Adds towns to states managed by Winter.Location plugin. Included:
 
 - component for state towns with pagination
 - component for Town detail
-- hooks for RainLab.Sitemap
-- extends RainLab State model
+- hooks for Winter.Sitemap
+- extends Winter State model
 
-Required plugins: RainLab.Location.
+Required plugins: Winter.Location.
 
 Tested with the latest stable OctoberCMS build 349.
 
 ## Render Town detail
 
-This component render town detail. Just create page Town-detail with slug 
+This component render town detail. Just create page Town-detail with slug
 `/town-detail/:slug?` and insert Town component:
 
 ![Town component](assets/images/locationtowns-component-town.png)
 
-To override Town detail template just create partial file `/town/default.htm` as copy 
-of `/plugins/vojtasvoboda/components/town/default.htm` and make own changes.
+To override Town detail template just create partial file `/town/default.htm` as copy
+of `/plugins/planetadeleste/components/town/default.htm` and make own changes.
 
 ## Render list of Towns
 
-Create page Towns with slug `/towns/:page?` where page means paginating. Insert 
-component Towns. Set filter for State and select page for show Town detail 
+Create page Towns with slug `/towns/:page?` where page means paginating. Insert
+component Towns. Set filter for State and select page for show Town detail
 created above:
 
 ![Towns component](assets/images/locationtowns-component-towns.png)
 
-To override Towns listing template just create partial file `/towns/default.htm` as copy 
-of `/plugins/vojtasvoboda/components/towns/default.htm` and make own changes.
+To override Towns listing template just create partial file `/towns/default.htm` as copy
+of `/plugins/planetadeleste/components/towns/default.htm` and make own changes.
 
 ## Add towns to sitemap
 
-Just install RainLab.Sitemap plugin and insert one town or all towns to sitemap:
+Just install Winter.Sitemap plugin and insert one town or all towns to sitemap:
 
 ![Towns in sitemap](assets/images/locationtowns-sitemap-integration.png)
 
@@ -55,10 +53,10 @@ $allTowns = $towns->all();
 $townsByState = $towns->where('state_id', 285)->get();
 ```
 
-### RainLab State extension
+### Winter State extension
 
 ```
-$state = \RainLab\Location\Models\State::find('285');
+$state = \Winter\Location\Models\State::find('285');
 $towns = $state->towns;
 ```
 
@@ -66,8 +64,8 @@ $towns = $state->towns;
 
 - !!fix fixed URL path at Town:114 and Town:129 (there should by path set in component)
 - !filter only by active states in towns component
-- directly extend RainLab.Location.State form to manage towns related to this state
-- run plugin without RainLab.Location (only town management)
+- directly extend Winter.Location.State form to manage towns related to this state
+- run plugin without Winter.Location (only town management)
 - add select box 'country' to backend listing for filtrating states
 - it is not possible to do october:down
 - add import and export

@@ -3,23 +3,23 @@
 # ===================================
 
 fields:
-    state:
-        label: vojtasvoboda.locationtown::lang.fields.state
-        type: relation
-        nameFrom: name
-    name:
-        label: vojtasvoboda.locationtown::lang.fields.name
-    slug:
-        label: vojtasvoboda.locationtown::lang.fields.url
-        preset:
-            field: name
-            type: slug
-    excerpt:
-        label: vojtasvoboda.locationtown::lang.fields.excerpt
-    description:
-        label: vojtasvoboda.locationtown::lang.fields.description
-        type: richeditor
-        size: huge
-    is_enabled:
-        label: vojtasvoboda.locationtown::lang.fields.enabled
-        type: checkbox
+  state:
+    label: planetadeleste.locationtown::lang.fields.state
+    type: relation
+    nameFrom: name
+  name:
+    label: planetadeleste.locationtown::lang.fields.name
+  slug:
+    label: planetadeleste.locationtown::lang.fields.url
+    preset:
+      field: name
+      type: slug
+  excerpt:
+    label: planetadeleste.locationtown::lang.fields.excerpt
+  description:
+    label: planetadeleste.locationtown::lang.fields.description
+    type: richeditor
+    size: huge
+  is_enabled:
+    label: planetadeleste.locationtown::lang.fields.enabled
+    type: checkbox

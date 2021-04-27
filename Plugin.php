@@ -1,10 +1,10 @@
-<?php namespace VojtaSvoboda\LocationTown;
+<?php namespace PlanetaDelEste\LocationTown;
 
 use Backend;
 use Event;
-use RainLab\Location\Models\State;
+use Winter\Location\Models\State;
 use System\Classes\PluginBase;
-use VojtaSvoboda\LocationTown\Models\Town;
+use PlanetaDelEste\LocationTown\Models\Town;
 
 /**
  * LocationTown Plugin Information File
@@ -13,7 +13,7 @@ class Plugin extends PluginBase
 {
     /** @var array $require Required plugins */
     public $require = [
-        'RainLab.Location'
+        'Winter.Location'
     ];
 
     /**
@@ -24,18 +24,19 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'vojtasvoboda.locationtown::lang.plugin.name',
-            'description' => 'vojtasvoboda.locationtown::lang.plugin.description',
-            'author' => 'Vojta Svoboda',
+            'name' => 'planetadeleste.locationtown::lang.plugin.name',
+            'description' => 'planetadeleste.locationtown::lang.plugin.description',
+            'author' => 'Alvaro Canepa',
             'icon' => 'icon-building-o',
+            'replaces'    => ['VojtaSvoboda.Location' => '<= 1.0.7'],
         ];
     }
 
     public function registerComponents()
     {
         return [
-            'VojtaSvoboda\LocationTown\Components\Town' => 'locationTown',
-            'VojtaSvoboda\LocationTown\Components\Towns' => 'locationTowns',
+            'PlanetaDelEste\LocationTown\Components\Town' => 'locationTown',
+            'PlanetaDelEste\LocationTown\Components\Towns' => 'locationTowns',
         ];
     }
 
@@ -43,13 +44,13 @@ class Plugin extends PluginBase
     {
         return [
             'locationtown' => [
-                'label' => 'vojtasvoboda.locationtown::lang.settings.label',
-                'description' => 'vojtasvoboda.locationtown::lang.settings.description',
-                'category' => 'rainlab.location::lang.plugin.name',
+                'label' => 'planetadeleste.locationtown::lang.settings.label',
+                'description' => 'planetadeleste.locationtown::lang.settings.description',
+                'category' => 'winter.location::lang.plugin.name',
                 'icon' => 'icon-building-o',
-                'url' => Backend::url('vojtasvoboda/locationtown/towns'),
+                'url' => Backend::url('planetadeleste/locationtown/towns'),
                 'order' => 500,
-                'permissions' => ['vojtasvoboda.locationtown.*'],
+                'permissions' => ['planetadeleste.locationtown.*'],
             ],
         ];
     }
@@ -62,17 +63,17 @@ class Plugin extends PluginBase
     {
         return [
             'functions' => [
-                'form_select_town' => ['VojtaSvoboda\LocationTown\Models\Town', 'formSelect'],
+                'form_select_town' => ['PlanetaDelEste\LocationTown\Models\Town', 'formSelect'],
             ]
         ];
     }
 
     public function boot()
     {
-        $this->app->bind('locationtowns', 'VojtaSvoboda\LocationTown\Models\Town');
+        $this->app->bind('locationtowns', 'PlanetaDelEste\LocationTown\Models\Town');
 
         State::extend(function($model) {
-            $model->hasMany['towns'] = 'VojtaSvoboda\LocationTown\Models\Town';
+            $model->hasMany['towns'] = 'PlanetaDelEste\LocationTown\Models\Town';
         });
 
         $this->initMenuItems();

@@ -3,21 +3,21 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
-        searchable: true
-    name:
-        label: vojtasvoboda.locationtown::lang.fields.name
-        searchable: true
-    state:
-        label: vojtasvoboda.locationtown::lang.fields.state
-        relation: state
-        select: name
-    slug:
-        label: vojtasvoboda.locationtown::lang.fields.url
-        searchable: true
-    excerpt:
-        label: vojtasvoboda.locationtown::lang.fields.excerpt
-    is_enabled:
-        label: vojtasvoboda.locationtown::lang.fields.enabled
-        type: switch
+  id:
+    label: ID
+    searchable: true
+  name:
+    label: planetadeleste.locationtown::lang.fields.name
+    searchable: true
+  state:
+    label: planetadeleste.locationtown::lang.fields.state
+    relation: state
+    select: name
+  slug:
+    label: planetadeleste.locationtown::lang.fields.url
+    searchable: true
+  excerpt:
+    label: planetadeleste.locationtown::lang.fields.excerpt
+  is_enabled:
+    label: planetadeleste.locationtown::lang.fields.enabled
+    type: switch

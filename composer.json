@@ -1,23 +1,34 @@
 {
-    "name": "vojtasvoboda/oc-locationtowns-plugin",
-    "type": "october-plugin",
-    "extra": {
-        "installer-name": "locationtowns"
+  "name": "planetadeleste/wn-locationtowns-plugin",
+  "type": "winter-plugin",
+  "extra": {
+    "installer-name": "locationtowns"
+  },
+  "description": "Adds towns to states managed by Winter.Location plugin.",
+  "homepage": "https://github.com/planetadeleste/wn-locationtowns-plugin",
+  "keywords": [
+    "winter",
+    "plugin",
+    "location",
+    "town",
+    "city"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vojta Svoboda",
+      "email": "vojtasvoboda.cz@gmail.com",
+      "role": "Developer"
     },
-    "description": "Adds towns to states managed by RainLab.Location plugin.",
-    "homepage": "https://github.com/vojtasvoboda/oc-locationtowns-plugin",
-    "keywords": ["october", "plugin", "location", "town", "city"],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Vojta Svoboda",
-            "email": "vojtasvoboda.cz@gmail.com",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "php": ">=5.4",
-        "composer/installers": "~1.0"
-    },
-    "minimum-stability": "dev"
+    {
+      "name": "Alvaro Cánepa",
+      "email": "bfpdevel@gmail.com",
+      "role": "Maintainer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "composer/installers": "~1.0"
+  },
+  "minimum-stability": "dev"
 }
