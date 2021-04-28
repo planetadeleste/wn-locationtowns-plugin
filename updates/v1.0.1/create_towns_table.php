@@ -17,7 +17,7 @@ class CreateTownsTable extends Migration
 
             if ( $this->isPluginActive('Winter.Location') ) {
                 $table->integer('state_id')->unsigned()->nullable();
-                $table->foreign('state_id')->references('id')->on('rainlab_location_states')->onDelete('set null');
+                $table->foreign('state_id')->references('id')->on('winter_location_states')->onDelete('set null');
             }
 
             $table->string('name', 300);

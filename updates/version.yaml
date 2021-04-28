@@ -10,3 +10,7 @@
 2.0.0:
   - Rebrand to PlanetaDelste.LocationTown
   - v2.0.0/rename_tables.php
+2.0.1:
+  - Fix installer name on composer.json
+2.0.2:
+  - Fix old table name on foreign index
