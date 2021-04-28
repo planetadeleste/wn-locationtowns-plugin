@@ -11,7 +11,7 @@ Adds towns to states managed by Winter.Location plugin. Included:
 
 Required plugins: Winter.Location.
 
-Tested with the latest stable OctoberCMS build 349.
+Tested with the latest stable WinterCMS 1.1.3.
 
 ## Render Town detail
 
@@ -47,7 +47,7 @@ List of available services provided by plugin:
 ### locationtowns service
 
 ```
-$towns = App::make('locationstowns');
+$towns = App::make('locationstown');
 $town = $towns->findOneBySlug('praha');
 $allTowns = $towns->all();
 $townsByState = $towns->where('state_id', 285)->get();
